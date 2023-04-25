@@ -15,8 +15,15 @@ for filepath in filepaths:
     filename = Path(filepath).stem
     name = filename.title()
 
-    pdf.set_font(family="Helvetica", style="B", size=24)
-    pdf.set_text_color(100, 100, 100)
+    # Add header
+    pdf.set_font(family="Helvetica", style="B", size=16)
     pdf.cell(w=50, h=8, txt=name, align="L", ln=1)
+
+    # Add content
+    with open(filepath) as file:
+        content = file.read()
+
+    pdf.set_font(family="Helvetica", size=12)
+    pdf.multi_cell(w=0, h=6, txt=content)
 
 pdf.output("outputs/merged_pdf.pdf")
