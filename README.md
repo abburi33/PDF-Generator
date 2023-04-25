@@ -1,7 +1,10 @@
 
 # pdf_template.py
 To create a dummy pdf template with lines, headers and footers.
-source data: csv_files/topics.csv
+source: csv_files/topics.csv
 
+# txt_to_pdf.py
+To create pdf file from multiple .txt files
+source: text_files
 
 
