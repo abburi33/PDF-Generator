@@ -7,4 +7,6 @@ source: csv_files/topics.csv
 To create pdf file from multiple .txt files
 source: text_files
 
-
+# invoice_generator.py
+Generate invoice pdfs from excel files
+source data: invoices folder
